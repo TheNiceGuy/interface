@@ -28,12 +28,21 @@ Public Class Window
         While Not Line Is Nothing
             LineSep = Line.Split(vbTab)
 
-            ' Si le une ligne ne contient pas 4 entrées séparées par une tabulation, le fichier est
-            ' probablement mal formatté.
+            ' On ignore une ligne vide.
+            If LineSep.Count = 1 Then
+                If LineSep(0) = vbNullString Then
+                    Line = FileIO.ReadLine()
+                    LineDebug += 1
+                    Continue While
+                End If
+            End If
+
+            ' On ignore une ligne mal formatté tout en écrivant un message.
             If LineSep.Count <> 4 Then
-                MessageBox.Show("Le fichier est mal formatté.")
-                FileIO.Close()
-                Return
+                MessageBox.Show("ATTENTION: La ligne " & LineDebug & " est mal formattée. Elle sera ignorée.")
+                Line = FileIO.ReadLine()
+                LineDebug += 1
+                Continue While
             End If
 
             ' On regarde si la date est bien un nombre.
@@ -60,8 +69,8 @@ Public Class Window
             Librairie.Add(NouveauFilm)
 
             'On lit une nouvelle ligne.
-            LineDebug += 1
             Line = FileIO.ReadLine()
+            LineDebug += 1
         End While
 
         ' On ferme le fichier et on update l'information dans le groupbox de l'inventaire.
