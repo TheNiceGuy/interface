@@ -15,7 +15,7 @@ Public Class Window
 
         FileDialog.ShowDialog()
         If Not FileDialog.FileName = vbNullString Then
-            FileIO = New StreamReader(FileDialog.FileName)
+            FileIO = New StreamReader(FileDialog.FileName, System.Text.Encoding.UTF7)
             Librairie.Clear()
         Else
             Return
@@ -66,7 +66,7 @@ Public Class Window
 
         FileDialog.ShowDialog()
         If Not FileDialog.FileName = vbNullString Then
-            FileIO = New StreamWriter(FileDialog.FileName)
+            FileIO = New StreamWriter(FileDialog.FileName, False, System.Text.Encoding.UTF7)
         Else
             Return
         End If
