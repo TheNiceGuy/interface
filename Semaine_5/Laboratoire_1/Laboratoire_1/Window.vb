@@ -47,7 +47,7 @@ Public Class Window
 
             ' On regarde si la date est bien un nombre.
             If Not IsNumeric(LineSep(2)) Then
-                MessageBox.Show("L'année de parution à la ligne " & LineDebug & " est mal formattée.")
+                MessageBox.Show("ERREUR: La ligne " & LineDebug & " ne contient pas une date numérique.")
                 FileIO.Close()
                 Return
             End If
