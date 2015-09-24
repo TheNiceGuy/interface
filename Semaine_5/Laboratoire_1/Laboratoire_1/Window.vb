@@ -13,6 +13,7 @@ Public Class Window
         Dim NouveauFilm As Film
         Dim Reserver As Boolean
 
+        FileDialog.Filter = "Fichiers .txt | *.txt"
         FileDialog.ShowDialog()
         If Not FileDialog.FileName = vbNullString Then
             FileIO = New StreamReader(FileDialog.FileName, System.Text.Encoding.UTF7)
@@ -64,6 +65,7 @@ Public Class Window
         Dim FileDialog As New SaveFileDialog
         Dim FileIO As StreamWriter
 
+        FileDialog.Filter = "Fichiers .txt | *.txt"
         FileDialog.ShowDialog()
         If Not FileDialog.FileName = vbNullString Then
             FileIO = New StreamWriter(FileDialog.FileName, False, System.Text.Encoding.UTF7)
