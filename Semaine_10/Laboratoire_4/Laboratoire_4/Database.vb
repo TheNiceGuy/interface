@@ -19,6 +19,7 @@ Public Class DataBase
             'On télécharge la base de données.
             Fill()
         Catch ex As System.Data.OleDb.OleDbException
+            MessageBox.Show("La base de données est soit invalide ou corrompu. Veuillez vérifier l'intégrité de votre base de données.")
             Return False
         End Try
 

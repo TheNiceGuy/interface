@@ -12,6 +12,12 @@
         HistoriqueResize()
     End Sub
 
+    Private Sub Window_ResizeBegin(sender As Object, e As EventArgs) Handles Me.Resize
+        'On update la taille des colonnes.
+        ArticleResize()
+        HistoriqueResize()
+    End Sub
+
     Private Sub OuvrirToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles OuvrirToolStripMenuItem1.Click
         Dim FileDialog As New OpenFileDialog
 
@@ -37,7 +43,6 @@
             TabControl.Enabled = True
             ArticleToolStripMenuItem.Enabled = True
         End If
-
     End Sub
 
     Private Sub QuitterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuitterToolStripMenuItem.Click
@@ -62,6 +67,11 @@
 
         'On update les limites.
         UpdateLimitPrix()
+    End Sub
+
+    Private Sub ListViewAffichage_DoubleClick(sender As Object, e As EventArgs) Handles ListViewAffichage.DoubleClick
+        'On appel la même fonction qui s'assure l'ajout d'une commande.
+        ButtonCommander_Click(sender, e)
     End Sub
 
     Private Sub ButtonCommander_Click(sender As Object, e As EventArgs) Handles ButtonCommander.Click

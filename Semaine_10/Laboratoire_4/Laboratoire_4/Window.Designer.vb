@@ -60,11 +60,11 @@ Partial Class Window
         Me.NumericUpDownQuantite = New System.Windows.Forms.NumericUpDown()
         Me.LabelQuantite = New System.Windows.Forms.Label()
         Me.LabelPrixTotalModif = New System.Windows.Forms.Label()
-        Me.LabelPrixTotal = New System.Windows.Forms.Label()
         Me.LabelDate = New System.Windows.Forms.Label()
         Me.DateTimePickerCommande = New System.Windows.Forms.DateTimePicker()
         Me.ButtonAnnuler = New System.Windows.Forms.Button()
         Me.ButtonConfirmer = New System.Windows.Forms.Button()
+        Me.LabelPrixTotal = New System.Windows.Forms.Label()
         Me.TabPageHistorique = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.ListViewHistorique = New System.Windows.Forms.ListView()
@@ -143,7 +143,7 @@ Partial Class Window
         'AjouterToolStripMenuItem
         '
         Me.AjouterToolStripMenuItem.Name = "AjouterToolStripMenuItem"
-        Me.AjouterToolStripMenuItem.Size = New System.Drawing.Size(133, 26)
+        Me.AjouterToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.AjouterToolStripMenuItem.Text = "Ajouter"
         '
         'TabControl
@@ -365,7 +365,7 @@ Partial Class Window
         Me.TabPageCommande.Location = New System.Drawing.Point(4, 4)
         Me.TabPageCommande.Name = "TabPageCommande"
         Me.TabPageCommande.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPageCommande.Size = New System.Drawing.Size(589, 379)
+        Me.TabPageCommande.Size = New System.Drawing.Size(589, 407)
         Me.TabPageCommande.TabIndex = 1
         Me.TabPageCommande.Text = "Commande"
         Me.TabPageCommande.UseVisualStyleBackColor = True
@@ -403,7 +403,7 @@ Partial Class Window
         Me.TableLayoutPanelCommande.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanelCommande.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanelCommande.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.TableLayoutPanelCommande.Size = New System.Drawing.Size(583, 373)
+        Me.TableLayoutPanelCommande.Size = New System.Drawing.Size(583, 401)
         Me.TableLayoutPanelCommande.TabIndex = 0
         '
         'LabelPrixUnitaireModif
@@ -494,22 +494,11 @@ Partial Class Window
         '
         Me.LabelPrixTotalModif.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.LabelPrixTotalModif.AutoSize = True
-        Me.LabelPrixTotalModif.Location = New System.Drawing.Point(194, 344)
+        Me.LabelPrixTotalModif.Location = New System.Drawing.Point(194, 372)
         Me.LabelPrixTotalModif.Margin = New System.Windows.Forms.Padding(0)
         Me.LabelPrixTotalModif.Name = "LabelPrixTotalModif"
         Me.LabelPrixTotalModif.Size = New System.Drawing.Size(0, 17)
         Me.LabelPrixTotalModif.TabIndex = 11
-        '
-        'LabelPrixTotal
-        '
-        Me.LabelPrixTotal.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.LabelPrixTotal.AutoSize = True
-        Me.LabelPrixTotal.Location = New System.Drawing.Point(119, 344)
-        Me.LabelPrixTotal.Margin = New System.Windows.Forms.Padding(0)
-        Me.LabelPrixTotal.Name = "LabelPrixTotal"
-        Me.LabelPrixTotal.Size = New System.Drawing.Size(75, 17)
-        Me.LabelPrixTotal.TabIndex = 10
-        Me.LabelPrixTotal.Text = "Prix Total :"
         '
         'LabelDate
         '
@@ -534,7 +523,7 @@ Partial Class Window
         'ButtonAnnuler
         '
         Me.ButtonAnnuler.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonAnnuler.Location = New System.Drawing.Point(391, 296)
+        Me.ButtonAnnuler.Location = New System.Drawing.Point(391, 324)
         Me.ButtonAnnuler.Name = "ButtonAnnuler"
         Me.ButtonAnnuler.Size = New System.Drawing.Size(189, 34)
         Me.ButtonAnnuler.TabIndex = 15
@@ -544,12 +533,23 @@ Partial Class Window
         'ButtonConfirmer
         '
         Me.ButtonConfirmer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonConfirmer.Location = New System.Drawing.Point(391, 336)
+        Me.ButtonConfirmer.Location = New System.Drawing.Point(391, 364)
         Me.ButtonConfirmer.Name = "ButtonConfirmer"
         Me.ButtonConfirmer.Size = New System.Drawing.Size(189, 34)
         Me.ButtonConfirmer.TabIndex = 14
         Me.ButtonConfirmer.Text = "Effectuer la commande"
         Me.ButtonConfirmer.UseVisualStyleBackColor = True
+        '
+        'LabelPrixTotal
+        '
+        Me.LabelPrixTotal.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.LabelPrixTotal.AutoSize = True
+        Me.LabelPrixTotal.Location = New System.Drawing.Point(119, 372)
+        Me.LabelPrixTotal.Margin = New System.Windows.Forms.Padding(0)
+        Me.LabelPrixTotal.Name = "LabelPrixTotal"
+        Me.LabelPrixTotal.Size = New System.Drawing.Size(75, 17)
+        Me.LabelPrixTotal.TabIndex = 10
+        Me.LabelPrixTotal.Text = "Prix Total :"
         '
         'TabPageHistorique
         '
