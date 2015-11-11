@@ -270,14 +270,14 @@
             Return
         End If
 
-        'On trouve le prix le plus élevé
+        'On trouve la date la plus élevée
         For Each Row In DB.Commandes.Rows
             If Row.Item(1) > Max Then
                 Max = Row.Item(1)
             End If
         Next
 
-        'On trouve le prix le plus élevé
+        'On trouve la date la plus petite
         Min = Max
         For Each Row In DB.Commandes.Rows
             If Row.Item(1) < Min Then
