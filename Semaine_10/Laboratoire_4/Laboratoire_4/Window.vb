@@ -12,7 +12,7 @@
         HistoriqueResize()
     End Sub
 
-    Private Sub Window_ResizeBegin(sender As Object, e As EventArgs) Handles Me.Resize
+    Private Sub Window_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         'On update la taille des colonnes.
         ArticleResize()
         HistoriqueResize()
